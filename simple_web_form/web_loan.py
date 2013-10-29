@@ -4,6 +4,42 @@ cgitb.enable()
 import cgi
 import math
 
+class FormInException(Exception):
+	def __init__(self, value):
+		self.value = value
+	def __str__(self):
+		return repr(self.value)
+class Loan(object):
+	# computes the remaining balance
+	def remainingBalance(self, month):
+		if month < 1:
+			raise FormInException(1)
+			print '''HTTP/1.1 501 Not Implemented 
+Content-type: text/html
+
+'''
+		elif month == 1:
+			return self.balance
+		else:
+			temp_bal = self.balance
+			return self.remainingBalance(month-1) + self.interestAccrued(month-1) - self.payment
+	# computes the interest accrued
+	def interestAccrued(self, month):
+		if month == 1:
+			return self.balance * self.monthly_rate
+		else:
+			return self.remainingBalance(month) * self.monthly_rate
+	# computes the monthly payment by dividing the annual rate by the term length
+	def computeMonthlyPayment(self):
+		self.payment = self.balance * ( self.monthly_rate / (1 - (1 + self.monthly_rate) ** (-self.term)))
+		return round(self.payment, 2)
+	# init function	
+	def __init__(self, balance, term, rate):
+		self.balance = balance
+		self.term = term
+		self.rate = rate
+		# convert annual rate to monthly rate, also casting it
+		self.monthly_rate = rate / (100.0 * 12)
 # get the input values
 form = cgi.FieldStorage()
 balance = float(form.getfirst("balance",0))
@@ -45,35 +81,3 @@ print '''
 </html>
 '''
 
-class Loan(object):
-	# computes the remaining balance
-	def remainingBalance(self, month):
-		if month < 1:
-			raise FormInError(1)
-		elif month == 1:
-			return self.balance
-		else:
-			temp_bal = self.balance
-			return self.remainingBalance(month-1) + self.interestAccrued(month-1) - self.payment
-	# computes the interest accrued
-	def interestAccrued(self, month):
-		if month == 1:
-			return self.balance * self.monthly_rate
-		else:
-			return self.remainingBalance(month) * self.monthly_rate
-	# computes the monthly payment by dividing the annual rate by the term length
-	def computeMonthlyPayment(self):
-		self.payment = self.balance * ( self.monthly_rate / (1 - (1 + self.monthly_rate) ** (-self.term)))
-		return round(self.payment, 2)
-	# init function	
-	def __init__(self, balance, term, rate):
-		self.balance = balance
-		self.term = term
-		self.rate = rate
-		# convert annual rate to monthly rate, also casting it
-		self.monthly_rate = rate / (100.0 * 12)
-class FormInException(Exception)
-	def __init__(self, value)
-		self.value = value
-	def __str__(self):
-		return repr(self.value)
