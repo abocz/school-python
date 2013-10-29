@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loan Calculator</title>
+        <link rel="Stylesheet" type="text/css" href="style1-assignment05.css"/>
+    </head>
+    <body>
+        <h1>Loan Calculator</h1>
+        
+        <p>
+            This tool will calculate a loan amortization table
+        </p>
+        
+        <form method="get" action="/cgi-bin/web_loan.py">
+            <h3>Values</h3>
+            <p>
+                Input values:
+            </p>
+            <div class="data-grid">
+                <div>
+                    <span>Balance</span>
+                    <span>
+                        <input type="number" name="balance" value="0"/>
+                    </span>
+                </div>
+                <div>
+                    <span>Term Length</span>
+                    <span>
+                        <input type="number" name="term" value="10"/>
+                    </span>
+                </div>
+                <div>
+                    <span>Rate</span>
+                    <span>
+                        <input type="number" name="rate" value="11"/>
+                    </span>
+                </div>
+            </div>
+        
+                        
+            <p>
+            <input type="submit" value="Create Table" />
+            </p>
+        </form>
+        
+    </body>
+</html>
+
