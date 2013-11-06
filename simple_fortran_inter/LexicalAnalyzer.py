@@ -12,14 +12,14 @@ class LexicalAnalyzer(object):
 		#open file
 		eosToken = Token("EOS",lineNum,1, TokenType.EOS_TOK)
 		self.tokenList.append(eosToken)
-		print(self.tokenList[0].getLexeme())
 		input = open(fileName)
 		#read lines into list, may misplace cursor, may be unneeded
 		lines = [line.strip() for line in input]
 		#apply processLine to each line iterating through the file
-		while lineNum < len(lines):
+		while lineNum < len(lines)+1:
 			print("line:"+str(lineNum))
 			self.processLine(lines[lineNum-1], lineNum)
+			lineNum = lineNum + 1
 		#create eos token
 		eosToken = Token("EOS",lineNum,1, TokenType.EOS_TOK)
 		self.tokenList.append(eosToken)
@@ -29,32 +29,24 @@ class LexicalAnalyzer(object):
 		index = 0
 		index = self.skip_white_space(line, index)
 		while index < len(line):
-			print("started while"+str(lineNum))
 			lexeme = self.getLexeme(line, index, lineNum)
-			print(lexeme)
 			tokType = self.getTokenType(lexeme, lineNum, index)
-			print("tok type")
-			print(tokType)
+			print("toktype"+str(tokType))
 			tokenHolder = Token(lexeme, lineNum, index+1, tokType)
-			print("tok holder")
-			print(tokenHolder)
 			self.tokenList.append(tokenHolder)
-			print(len(lexeme))
 			index = index + len(lexeme)
 			print("index:"+str(index))
 			index = self.skip_white_space(line, index)
-			print("finished while:"+str(lineNum))
 	def getTokenType(self, lexeme, lineNum, columnNum):
-		print("begin token")
 		assert lexeme is not None
 		assert len(lexeme) > 0
 		assert lineNum >= 1
-		print(str(columnNum))
 		#assert columnNum >= 1
 		#token work
 		tokType = TokenType.EOS_TOK
 		lexeme.lower()
-		if lexeme[0].isalpha:
+		print(lexeme)
+		if lexeme[0].isalpha():
 			if len(lexeme) is 1:
 				tokType = TokenType.ID_TOK
 			else:
@@ -73,8 +65,9 @@ class LexicalAnalyzer(object):
 				elif lexeme == "write":
 					tokType = TokenType.WRITE_TOK
 				else:
+					print(str(lexeme))
 					raise LexException("invalid lexeme", lineNum, columnNum)
-		elif lexeme[0].isdigit:
+		elif lexeme[0].isdigit():
 			i = 0
 			while i < (len(lexeme)) and (lexeme[i].isdigit):
 				i = i + 1
@@ -127,10 +120,8 @@ class LexicalAnalyzer(object):
 	def skip_white_space(self, line, index):
 		assert line is not None
 		assert index >= 0
-		print("we made it here")
 		while (index < len(line)) and (line[index].isspace()):
 			index += 1
-			print("oh well, what about this?")
 		return index
 	def getNextToken(self):
 		if not self.tokenList:
