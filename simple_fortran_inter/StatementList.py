@@ -1,8 +1,8 @@
 class StatementList(object):
 	# class level empty list
-
-	def __init__(self):
-		self.stmts = []
+	stmts = []
+	#def __init__(self):
+	#	self.stmts = []
 
 	def add(self, statement):
 		self.stmts.append(statement)

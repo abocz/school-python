@@ -11,10 +11,11 @@ class Memory(object):
 		if not var.isalpha:
 			raise ValueError("invalid memory access")
 		var.lower()
-		self.mem[var-chr('a')] = value
+		print("store stared!")
+		self.mem[ord(var)-ord('a')] = value
 
 	def fetch(self, var):
 		if not var.isalpha:
 			raise ValueError("invalid memory access")
 		var.lower()
-		return self.mem[var-chr('a')]
+		return self.mem[ord(var)-ord('a')]

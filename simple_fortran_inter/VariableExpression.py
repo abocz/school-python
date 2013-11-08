@@ -7,6 +7,7 @@ class VariableExpression(Expression):
 		self.var = var
 
 	def evaluate(self):
+		print("begin eval")
 		return Memory.fetch(self.var)
 
 	def setValue(self, value):

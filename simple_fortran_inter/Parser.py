@@ -14,12 +14,10 @@ from VariableExpression import VariableExpression
 
 
 class Parser():
-	
 	def __init__(self, fileName):
 		if not fileName:
 			raise ValueError("null file name")
 		self.lex = LexicalAnalyzer(fileName)
-	
 	def parse(self):
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.PROGRAM_TOK)
@@ -39,7 +37,6 @@ class Parser():
 			raise ParserException("invalid id", tok.getRowNum(), tok.getColumnNum())
 		progHolder = Program(sList)
 		return progHolder
-	
 	def getStatementList(self):
 		sList = StatementList()
 		s = self.getStatement()
@@ -50,14 +47,12 @@ class Parser():
 			sList.add(s)
 			tok = self.lex.getLookaheadToken()
 		return sList
-	
 	def isValidStartOfStatement(self, tok):
 		assert tok is not None
 		if (tok.getTokenType() == TokenType.ID_TOK) or (tok.getTokenType() == TokenType.DO_TOK) or (tok.getTokenType() == TokenType.IF_TOK) or (tok.getTokenType() == TokenType.WRITE_TOK):
 			return True
 		else:
 			return False
-	
 	def getStatement(self):
 		tok = self.lex.getLookaheadToken()
 		if tok.getTokenType() == TokenType.IF_TOK:
@@ -71,7 +66,6 @@ class Parser():
 		else:
 			raise ParserException("statement expected", tok.getRowNum(), tok.getColumnNum())
 		return s
-	
 	def getPrintStatement(self):
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.WRITE_TOK)
@@ -82,7 +76,6 @@ class Parser():
 		self.match(tok, TokenType.RIGHT_PAREN_TOK)
 		pState = PrintStatement(expr)
 		return pState
-	
 	def getDoStatement(self):
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.DO_TOK)
@@ -108,7 +101,6 @@ class Parser():
 		self.match(tok, TokenType.DO_TOK)
 		doer = DoStatement(var, first, last, sList)
 		return doer
-	
 	def getAssignmentStatement(self):
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.ID_TOK)
@@ -120,7 +112,6 @@ class Parser():
 		expr = self.getExpression()
 		assState = AssignmentStatement(var,expr)
 		return assState
-	
 	def getIfStatement(self):
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.IF_TOK)
@@ -141,7 +132,6 @@ class Parser():
 		self.match(tok, TokenType.IF_TOK)
 		iffer = IfStatement(expr, sList1, sList2)
 		return iffer
-	
 	def getBooleanExpression(self):
 		#maybe issue here due to correct object type
 		#also consolidate with below function to perhap fix
@@ -151,7 +141,6 @@ class Parser():
 		boo = BooleanExpression(op, expr1, expr2)
 		return boo
 	#maybe issue, with relative operator enum situation	
-	
 	def getRelativeOperator(self):
 		tok = self.lex.getNextToken()
 		if tok.getTokenType() == TokenType.LT_TOK:
@@ -169,7 +158,6 @@ class Parser():
 		else:
 			raise ParserException("relational operator expected", tok.getRowNum(), tok.getColumnNum())
 		return op
-	
 	def getExpression(self):
 		tok = self.lex.getLookaheadToken()
 		if tok.getTokenType() == TokenType.ID_TOK:
@@ -184,7 +172,6 @@ class Parser():
 			expr2 = self.getExpression()
 			expr = BinaryExpression(op, expr1, expr2)
 		return expr
-	
 	def getArithmeticOperator(self):
 		tok = self.lex.getNextToken()
 		if tok.getTokenType() == TokenType.ADD_TOK:
@@ -198,7 +185,6 @@ class Parser():
 		else:
 			raise ParserException("arithmetic op error", tok.getRowNum(), tok.getColumnNum())
 		return op
-	
 	def match(self, tok, expected):
 		assert tok is not None
 		if tok.getTokenType() != expected:

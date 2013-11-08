@@ -1,4 +1,5 @@
 class ParserException(Exception):
+
 	def __init__(self, message, lineNum, columnNum):
 		if not message:
 			raise ValueError("null string argument")
@@ -9,5 +10,6 @@ class ParserException(Exception):
 		self.message = message
 		self.lineNum = lineNum
 		self.columnNum = columnNum
+
 	def __str__(self):
 		return "{} at line number {} column number {}".format(self.message, self.lineNum, self.columnNum)

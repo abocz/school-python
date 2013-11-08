@@ -5,7 +5,6 @@ from Program import Program
 
 
 class Interpreter(object):
-	#run the program with a try catch block
 	def main():
 		try:
 			p = Parser("test3.for")
