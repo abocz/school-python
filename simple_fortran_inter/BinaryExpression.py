@@ -13,12 +13,13 @@ class BinaryExpression(Expression):
 
 	def evaluate(self):
 		if self.op == BinaryExpression.ArithmeticOperator[0]:
-			return self.expr1.evaluate() + self.expr2.evaluate()
+			value = int(self.expr1.evaluate()) + int(self.expr2.evaluate())
 		elif self.op == BinaryExpression.ArithmeticOperator[1]:
-			return self.expr1.evaluate() - self.expr2.evaluate()
+			value = int(self.expr1.evaluate()) - int(self.expr2.evaluate())
 		elif self.op == BinaryExpression.ArithmeticOperator[2]:
-			return self.expr1.evaluate() * self.expr2.evaluate()
+			value = int(self.expr1.evaluate()) * int(self.expr2.evaluate())
 		elif self.op == BinaryExpression.ArithmeticOperator[3]:
-			return self.expr1.evaluate() / self.expr2.evaluate()
+			value = int(self.expr1.evaluate()) / int(self.expr2.evaluate())
 		else:
 			raise ValueError("Invalid Arithmetic Operator in Binary Expression")
+		return value
