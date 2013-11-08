@@ -4,7 +4,7 @@ class ParserException(Exception):
 			raise ValueError("null string argument")
 		if lineNum <= 0:
 			raise ValueError("invalid line argument")
-		if column <= 0:
+		if columnNum <= 0:
 			raise ValueError("invalid column argument")
 		self.message = message
 		self.lineNum = lineNum

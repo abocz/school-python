@@ -1,6 +1,8 @@
 from Statement import Statement
 
+
 class AssignmentStatement(Statement):
+
 	def __init__(self, var, expr):
 		if not expr:
 			raise ValueError("invalid expression argument")
@@ -10,4 +12,5 @@ class AssignmentStatement(Statement):
 		self.var = var
 		
 	def execute(self):
+		# i been gettin money where the fuck u been
 		self.var.setValue(self.expr.evaluate())

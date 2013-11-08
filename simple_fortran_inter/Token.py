@@ -11,11 +11,15 @@ class Token(object):
 		self.rowNumber = rowNumber
 		self.columnNumber = columnNumber
 		self.tok = tok
+
 	def getLexeme(self):
 		return self.lexeme
+
 	def getRowNum(self):
 		return self.rowNumber
+
 	def getColumnNum(self):
 		return self.columnNumber
+
 	def getTokenType(self):
 		return self.tok

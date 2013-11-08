@@ -9,18 +9,11 @@ class LexicalAnalyzer(object):
 			raise ValueError("null argument")
 		self.tokenList = []
 		lineNum = 1
-		#open file
-		eosToken = Token("EOS",lineNum,1, TokenType.EOS_TOK)
-		self.tokenList.append(eosToken)
 		input = open(fileName)
-		#read lines into list, may misplace cursor, may be unneeded
 		lines = [line.strip() for line in input]
-		#apply processLine to each line iterating through the file
 		while lineNum < len(lines)+1:
-			print("line:"+str(lineNum))
 			self.processLine(lines[lineNum-1], lineNum)
-			lineNum = lineNum + 1
-		#create eos token
+			lineNum += 1
 		eosToken = Token("EOS",lineNum,1, TokenType.EOS_TOK)
 		self.tokenList.append(eosToken)
 		input.close()
@@ -31,20 +24,17 @@ class LexicalAnalyzer(object):
 		while index < len(line):
 			lexeme = self.getLexeme(line, index, lineNum)
 			tokType = self.getTokenType(lexeme, lineNum, index)
-			print("toktype"+str(tokType))
 			tokenHolder = Token(lexeme, lineNum, index+1, tokType)
 			self.tokenList.append(tokenHolder)
-			index = index + len(lexeme)
-			print("index:"+str(index))
+			index += len(lexeme)
 			index = self.skip_white_space(line, index)
 	def getTokenType(self, lexeme, lineNum, columnNum):
 		assert lexeme is not None
 		assert len(lexeme) > 0
 		assert lineNum >= 1
 		#assert columnNum >= 1
-		#token work
-		tokType = TokenType.EOS_TOK
 		lexeme.lower()
+		#print the lexeme
 		print(lexeme)
 		if lexeme[0].isalpha():
 			if len(lexeme) is 1:
@@ -65,12 +55,11 @@ class LexicalAnalyzer(object):
 				elif lexeme == "write":
 					tokType = TokenType.WRITE_TOK
 				else:
-					print(str(lexeme))
 					raise LexException("invalid lexeme", lineNum, columnNum)
 		elif lexeme[0].isdigit():
 			i = 0
-			while i < (len(lexeme)) and (lexeme[i].isdigit):
-				i = i + 1
+			while (i < (len(lexeme))) and (lexeme[i].isdigit()):
+				i += 1
 			if i == len(lexeme):
 				tokType = TokenType.INT_TOK
 			else:
@@ -114,9 +103,7 @@ class LexicalAnalyzer(object):
 		i = index
 		while (i < len(line)) and (not line[i].isspace()):
 			i += 1
-		# ensure slicing is done correctly here
 		return line[index:i]
-		# ensure slicing
 	def skip_white_space(self, line, index):
 		assert line is not None
 		assert index >= 0
@@ -126,7 +113,7 @@ class LexicalAnalyzer(object):
 	def getNextToken(self):
 		if not self.tokenList:
 			raise ValueError("no more tokens")
-		return self.tokenList.pop([0])
+		return self.tokenList.pop(0)
 	def getLookaheadToken(self):
 		if not self.tokenList:
 			raise ValueError("no more tokens")

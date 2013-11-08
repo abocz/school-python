@@ -1,13 +1,20 @@
 from string import ascii_lowercase
-letters = list(ascii_lowercase)
+
+
 class Memory(object):
+	mem = []
+	letters = list(ascii_lowercase)
+	for x in range(len(letters)):
+		mem.append(0)
+
 	def store(self, var, value):
 		if not var.isalpha:
 			raise ValueError("invalid memory access")
 		var.lower()
-		# NOT FINISHED
+		self.mem[var-chr('a')] = value
+
 	def fetch(self, var):
 		if not var.isalpha:
 			raise ValueError("invalid memory access")
 		var.lower()
-		return #NOT FINISHED
+		return self.mem[var-chr('a')]

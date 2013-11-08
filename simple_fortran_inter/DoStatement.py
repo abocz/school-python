@@ -1,6 +1,8 @@
 from Statement import Statement
 
+
 class DoStatement(Statement):
+
 	def __init__(self, var, first, last, sList):
 		if not var:
 			raise ValueError("invalid variable argument")

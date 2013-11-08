@@ -22,19 +22,21 @@ class Parser():
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.PROGRAM_TOK)
 		tok = self.lex.getNextToken()
+		#possible issue here
 		self.match(tok, TokenType.ID_TOK)
 		id = tok.getLexeme()
-		sList = StatementList(self.getStatementList())
+		sList = self.getStatementList()
+		print(sList)
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.END_TOK)
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.PROGRAM_TOK)
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.ID_TOK)
-		if id == tok.getLexeme():
+		if id != tok.getLexeme():
 			raise ParserException("invalid id", tok.getRowNum(), tok.getColumnNum())
-		proggy = Program(sList)
-		return proggy
+		progHolder = Program(sList)
+		return progHolder
 	def getStatementList(self):
 		sList = StatementList()
 		s = self.getStatement()
@@ -47,7 +49,7 @@ class Parser():
 		return sList
 	def isValidStartOfStatement(self, tok):
 		assert tok is not None
-		if tok.getTokenType() == TokenType.ID_TOK or tok.getTokenType() == TokenType.DO_TOK or tok.getTokenType() == TokenType.IF_TOK or tok.getTokenType() == TokenType.WRITE_TOK:
+		if (tok.getTokenType() == TokenType.ID_TOK) or (tok.getTokenType() == TokenType.DO_TOK) or (tok.getTokenType() == TokenType.IF_TOK) or (tok.getTokenType() == TokenType.WRITE_TOK):
 			return True
 		else:
 			return False
@@ -92,7 +94,7 @@ class Parser():
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.INT_TOK)
 		last = int(tok.getLexeme())
-		sList = StatementList(self.getStatementList())
+		sList = self.getStatementList()
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.END_TOK)
 		tok = self.lex.getNextToken()
@@ -100,8 +102,6 @@ class Parser():
 		doer = DoStatement(var, first, last, sList)
 		return doer
 	def getAssignmentStatement(self):
-		tok = self.lex.getNextToken()
-		self.match(tok, TokenType.DO_TOK)
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.ID_TOK)
 		#maybe same issue
@@ -122,10 +122,10 @@ class Parser():
 		self.match(tok, TokenType.RIGHT_PAREN_TOK)
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.THEN_TOK)
-		sList1 = StatementList(self.getStatementList())
+		sList1 = self.getStatementList()
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.ELSE_TOK)
-		sList2 = StatementList(self.getStatementList())
+		sList2 = self.getStatementList()
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.END_TOK)
 		tok = self.lex.getNextToken()
@@ -144,43 +144,44 @@ class Parser():
 	def getRelativeOperator(self):
 		tok = self.lex.getNextToken()
 		if tok.getTokenType() == TokenType.LT_TOK:
-			op = BooleanExpression.RelativeOperator.LT
+			op = BooleanExpression.RelativeOperator[1]
 		elif tok.getTokenType() == TokenType.LE_TOK:
-			op = BooleanExpression.RelativeOperator.LE
+			op = BooleanExpression.RelativeOperator[0]
 		elif tok.getTokenType() == TokenType.GT_TOK:
-			op = BooleanExpression.RelativeOperator.GT
+			op = BooleanExpression.RelativeOperator[3]
 		elif tok.getTokenType() == TokenType.GE_TOK:
-			op = BooleanExpression.RelativeOperator.GE
+			op = BooleanExpression.RelativeOperator[2]
 		elif tok.getTokenType() == TokenType.EQ_TOK:
-			op = BooleanExpression.RelativeOperator.EQ
+			op = BooleanExpression.RelativeOperator[4]
 		elif tok.getTokenType() == TokenType.NE_TOK:
-			op = BooleanExpression.RelativeOperator.NE
+			op = BooleanExpression.RelativeOperator[5]
 		else:
 			raise ParserException("relational operator expected", tok.getRowNum(), tok.getColumnNum())
 		return op
 	def getExpression(self):
-		tok = self.lex.getNextToken()
+		tok = self.lex.getLookaheadToken()
 		if tok.getTokenType() == TokenType.ID_TOK:
 			tok = self.lex.getNextToken()
 			expr = VariableExpression(tok.getLexeme()[0])
 		elif tok.getTokenType() == TokenType.INT_TOK:
 			tok = self.lex.getNextToken()
-			expr = ConstantExpression(int(tok.getLexeme()))
+			expr = ConstantExpression(tok.getLexeme())
 		else:
 			op = self.getArithmeticOperator()
 			expr1 = self.getExpression()
 			expr2 = self.getExpression()
 			expr = BinaryExpression(op, expr1, expr2)
+		return expr
 	def getArithmeticOperator(self):
 		tok = self.lex.getNextToken()
 		if tok.getTokenType() == TokenType.ADD_TOK:
-			op = BinaryExpression.ArithmeticOperator.ADD_OP
-		elif tok.getTokenType() == TokenType.SUB_OP:
-			op = BinaryExpression.ArithmeticOperator.SUB_OP
-		elif tok.getTokenType() == TokenType.MUL_OP:
-			op = BinaryExpression.ArithmeticOperator.MUL_OP
-		elif tok.getTokenType() == TokenType.DIV_OP:
-			op = BinaryExpression.ArithmeticOperator.DIV_OP
+			op = BinaryExpression.ArithmeticOperator[0]
+		elif tok.getTokenType() == TokenType.SUB_TOK:
+			op = BinaryExpression.ArithmeticOperator[1]
+		elif tok.getTokenType() == TokenType.MUL_TOK:
+			op = BinaryExpression.ArithmeticOperator[2]
+		elif tok.getTokenType() == TokenType.DIV_TOK:
+			op = BinaryExpression.ArithmeticOperator[3]
 		else:
 			raise ParserException("arithmetic op error", tok.getRowNum(), tok.getColumnNum())
 		return op
@@ -188,4 +189,4 @@ class Parser():
 		assert tok is not None
 		if tok.getTokenType() != expected:
 			# ParserException(doesn't print expected token)
-			raise ParserException(expected + " expected", tok.getRowNum(), tok.getColumnNum())
+			raise ParserException(str(expected) + " expected", tok.getRowNum(), tok.getColumnNum())

@@ -9,8 +9,8 @@ class Interpreter(object):
 	def main():
 		try:
 			p = Parser("test3.for")
-			prog = Program(p.parse())
-			prog.execute()
+			progs = Program(p.parse())
+			progs.execute()
 		except LexException as e:
 			print(e)
 		except ParserException as e:
