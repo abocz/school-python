@@ -1,6 +1,2 @@
 notes:
-6. parser.py - lots of checks, DoStatement char issue, AssStatement char issue
-	-> solution maybe be to after init char then specify only the first char during the next phrase
-7. memory.py - finish the exits
-8. lexicalanalyzer - ensure slicing
-9. anything after those....
+problem with statementList, and ifStatements being added in the wrong order of the pring statments, or maybe a tokenization issue with the if token
