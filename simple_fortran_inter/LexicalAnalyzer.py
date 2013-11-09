@@ -4,19 +4,21 @@ from TokenType import TokenType
 
 
 class LexicalAnalyzer(object):
+
 	def __init__(self, fileName):
 		if fileName is None:
 			raise ValueError("null argument")
 		self.tokenList = []
 		lineNum = 1
-		input = open(fileName)
-		lines = [line.strip() for line in input]
+		holder = open(fileName)
+		lines = [line.strip() for line in holder]
 		while lineNum < len(lines)+1:
 			self.processLine(lines[lineNum-1], lineNum)
 			lineNum += 1
-		eosToken = Token("EOS",lineNum,1, TokenType.EOS_TOK)
+		eosToken = Token("EOS", lineNum, 1, TokenType.EOS_TOK)
 		self.tokenList.append(eosToken)
-		input.close()
+		holder.close()
+
 	def processLine(self, line, lineNum):
 		assert line is not None
 		index = 0
@@ -28,14 +30,13 @@ class LexicalAnalyzer(object):
 			self.tokenList.append(tokenHolder)
 			index += len(lexeme)
 			index = self.skip_white_space(line, index)
+
 	def getTokenType(self, lexeme, lineNum, columnNum):
 		assert lexeme is not None
 		assert len(lexeme) > 0
 		assert lineNum >= 1
 		#assert columnNum >= 1
 		lexeme.lower()
-		#print the lexeme
-		print(lexeme)
 		if lexeme[0].isalpha():
 			if len(lexeme) is 1:
 				tokType = TokenType.ID_TOK
@@ -96,6 +97,7 @@ class LexicalAnalyzer(object):
 			else:
 				raise LexException("invalid lexeme", lineNum, columnNum)
 		return tokType
+
 	def getLexeme(self, line, index, lineNum):
 		assert line is not None
 		assert index >= 0
@@ -104,16 +106,19 @@ class LexicalAnalyzer(object):
 		while (i < len(line)) and (not line[i].isspace()):
 			i += 1
 		return line[index:i]
+
 	def skip_white_space(self, line, index):
 		assert line is not None
 		assert index >= 0
 		while (index < len(line)) and (line[index].isspace()):
 			index += 1
 		return index
+
 	def getNextToken(self):
 		if not self.tokenList:
 			raise ValueError("no more tokens")
 		return self.tokenList.pop(0)
+
 	def getLookaheadToken(self):
 		if not self.tokenList:
 			raise ValueError("no more tokens")
