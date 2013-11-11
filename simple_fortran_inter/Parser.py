@@ -39,7 +39,6 @@ class Parser():
 		return holder
 
 	def getStatementList(self):
-		#issue->
 		sList = StatementList()
 		s = self.getStatement()
 		sList.add(s)
