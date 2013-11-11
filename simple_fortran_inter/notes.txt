@@ -1,3 +1,0 @@
-notes:
-problem with statementList, and ifStatements being added in the wrong order
-->Actually the problem is while the ifStatement is being built the statements get added to the statementList for the program, when it should be added to a separate statementList
