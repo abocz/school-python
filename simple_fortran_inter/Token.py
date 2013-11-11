@@ -1,9 +1,9 @@
 class Token(object):
+
 	def __init__(self, lexeme, rowNumber, columnNumber, tok):
-		#check for null and empty
 		if lexeme is None or 0:
 			raise ValueError("invalid lexeme")
-		if rowNumber <=0:
+		if rowNumber <= 0:
 			raise ValueError("invalid row number")
 		if columnNumber <= 0:
 			raise ValueError("invalid column number")
