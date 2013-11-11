@@ -1,0 +1,1 @@
+<h1>simple cgi python form</h1>
