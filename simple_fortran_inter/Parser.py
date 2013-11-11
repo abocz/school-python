@@ -27,7 +27,6 @@ class Parser():
 		self.match(tok, TokenType.ID_TOK)
 		id1 = tok.getLexeme()
 		sList = self.getStatementList()
-		print(sList)
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.END_TOK)
 		tok = self.lex.getNextToken()
@@ -40,6 +39,7 @@ class Parser():
 		return holder
 
 	def getStatementList(self):
+		#issue->
 		sList = StatementList()
 		s = self.getStatement()
 		sList.add(s)
@@ -110,7 +110,6 @@ class Parser():
 	def getAssignmentStatement(self):
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.ID_TOK)
-		#maybe same issue
 		ch = tok.getLexeme()[0]
 		var = VariableExpression(ch)
 		tok = self.lex.getNextToken()
@@ -137,8 +136,8 @@ class Parser():
 		self.match(tok, TokenType.END_TOK)
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.IF_TOK)
-		iffer = IfStatement(expr, sList1, sList2)
-		return iffer
+		ifState = IfStatement(expr, sList1, sList2)
+		return ifState
 
 	def getBooleanExpression(self):
 		op = self.getRelativeOperator()
@@ -171,6 +170,7 @@ class Parser():
 			tok = self.lex.getNextToken()
 			expr = VariableExpression(tok.getLexeme()[0])
 		elif tok.getTokenType() == TokenType.INT_TOK:
+			#issue?
 			tok = self.lex.getNextToken()
 			expr = ConstantExpression(tok.getLexeme())
 		else:
