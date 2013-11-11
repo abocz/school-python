@@ -13,7 +13,7 @@ class IfStatement(Statement):
 		self.sList2 = sList2
 
 	def execute(self):
-		if self.expr.evaluate:
+		if self.expr.evaluate():
 			self.sList1.execute()
 		else:
 			self.sList2.execute()

@@ -79,7 +79,6 @@ class Parser():
 		self.match(tok, TokenType.RIGHT_PAREN_TOK)
 		return PrintStatement(expr)
 
-
 	def getDoStatement(self):
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.DO_TOK)
@@ -104,7 +103,6 @@ class Parser():
 		self.match(tok, TokenType.DO_TOK)
 		return DoStatement(var, first, last, sList)
 
-
 	def getAssignmentStatement(self):
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.ID_TOK)
@@ -113,7 +111,7 @@ class Parser():
 		tok = self.lex.getNextToken()
 		self.match(tok, TokenType.ASSIGNMENT_TOK)
 		expr = self.getExpression()
-		return AssignmentStatement(var,expr)
+		return AssignmentStatement(var, expr)
 
 	def getIfStatement(self):
 		tok = self.lex.getNextToken()
@@ -140,7 +138,6 @@ class Parser():
 		expr1 = self.getExpression()
 		expr2 = self.getExpression()
 		return BooleanExpression(op, expr1, expr2)
-
 
 	def getRelativeOperator(self):
 		tok = self.lex.getNextToken()

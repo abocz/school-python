@@ -12,5 +12,4 @@ class AssignmentStatement(Statement):
 		self.var = var
 		
 	def execute(self):
-		# i been gettin money where the fuck u been
 		self.var.setValue(self.expr.evaluate())
