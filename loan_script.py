@@ -2,11 +2,11 @@
 # Andrew Bocz
 
 from sys import argv
-from assignment2_final import Loan
+from loan_class import Loan
+
 
 if len(argv) != 4:
-	print "Wrong number of arguments, retry"
-	quit()
+	raise ValueError("wrong number of arguements")
 
 balance = float(argv[1])
 term = int(argv[2])
