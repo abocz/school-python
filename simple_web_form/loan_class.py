@@ -1,12 +1,12 @@
 # Assignment 2 CS 4520 Andrew Bocz
-# Loan object class
+# Loan object class, represents a loan
 import math
 
 class Loan(object):
 	# computes the remaining balance
 	def remainingBalance(self, month):
 		if month < 1:
-			return 0
+			raise ValueError("month must be positive")
 		elif month == 1:
 			return self.balance
 		else:
@@ -14,7 +14,9 @@ class Loan(object):
 			return self.remainingBalance(month-1) + self.interestAccrued(month-1) - self.payment
 	# computes the interest accrued
 	def interestAccrued(self, month):
-		if month == 1:
+		if month < 1:
+			raise ValueError("month must be positive")		
+		elif month == 1:
 			return self.balance * self.monthly_rate
 		else:
 			return self.remainingBalance(month) * self.monthly_rate
