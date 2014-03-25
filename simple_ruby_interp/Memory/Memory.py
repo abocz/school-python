@@ -4,7 +4,7 @@
 class Memory():
     mem = []
     for x in range(52):
-        mem[x].append(0)
+        mem.append(0)
 
     def fetch(self, var):
         assert var

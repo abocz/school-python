@@ -1,4 +1,4 @@
-from LexicalException import LexException
+from LexicalException import LexicalException
 from Parser import Parser
 from ParserException import ParserException
 from Program import Program
@@ -11,7 +11,7 @@ class Interpreter(object):
             p = Parser("test1.rb")
             progs = Program(p.parse())
             progs.execute()
-        except LexException as e:
+        except LexicalException as e:
             print(e)
         except ParserException as e:
             print(e)

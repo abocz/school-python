@@ -26,7 +26,7 @@ class LexicalAnalyzer(object):
         assert line_num > 0
         column_num = 0
         column_num = self.skip_white_space(line, column_num)
-        while column_num < line.length():
+        while column_num < len(line):
             lexeme = self.get_lexeme(line, column_num)
             type = self.determine_token_type(lexeme, line_num, column_num)
             tok = Token(line_num, column_num+1, lexeme, type)
