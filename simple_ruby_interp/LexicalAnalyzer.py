@@ -18,7 +18,7 @@ class LexicalAnalyzer(object):
             self.process_line(lines[line_num-1], line_num)
             line_num += 1
         input.close()
-        self.token_list.append(Token("EOS", line_num, 1, TokenType.EOS_TOK))
+        self.token_list.append(Token(line_num, 1, "EOS", TokenType.EOS_TOK))
 
     def process_line(self, line, line_num):
         assert line is not None
