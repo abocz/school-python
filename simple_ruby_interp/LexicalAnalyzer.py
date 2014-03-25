@@ -117,7 +117,10 @@ class LexicalAnalyzer(object):
         return self.token_list.pop(0)
 
     def more_tokens(self):
-        return not self.token_list
+        if len(self.token_list)>0:
+            return True
+        else:
+            return False
 
     def get_lookahead_token(self):
         if not self.more_tokens():

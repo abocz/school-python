@@ -177,8 +177,8 @@ class Parser():
     def match(self, tok, tokType):
         assert tok
         assert tokType
-        if tok.get_token_type() != type:
-            raise ParserException(type + " expected at ", tok.get_line_number(), tok.get_column_number())
+        if tok.get_token_type() != tokType:
+            raise ParserException(tokType + " expected at ", tok.get_line_number(), tok.get_column_number())
 
     def get_next_token(self):
         try:

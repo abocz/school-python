@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/simple_ruby_interp$Interpreter.coverage" NAME="Interpreter Coverage Results" MODIFIED="1395732889819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/simple_ruby_interp$Interpreter.coverage" NAME="Interpreter Coverage Results" MODIFIED="1395734673738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -97,7 +97,7 @@
       <file leaf-file-name="enum.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://Z:/Python34/Lib/enum.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="249" column="0" selection-start="10266" selection-end="10266" vertical-scroll-proportion="0.0" vertical-offset="4018" max-vertical-offset="8993">
+            <state line="252" column="0" selection-start="10347" selection-end="10347" vertical-scroll-proportion="0.0" vertical-offset="4069" max-vertical-offset="8993">
               <folding />
             </state>
           </provider>
@@ -112,12 +112,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LexicalAnalyzer.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.py">
+      <file leaf-file-name="Parser.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="76" selection-start="664" selection-end="664" vertical-scroll-proportion="0.32405892" vertical-offset="142" max-vertical-offset="2380">
+            <state line="132" column="0" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.29598662" vertical-offset="2067" max-vertical-offset="3400">
               <folding>
-                <element signature="e#2#47#0" expanded="true" />
+                <element signature="e#2#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,7 +185,6 @@
         <option value="$PROJECT_DIR$/UntilStatement.py" />
         <option value="$PROJECT_DIR$/WhileStatement.py" />
         <option value="$PROJECT_DIR$/Token.py" />
-        <option value="$PROJECT_DIR$/Parser.py" />
         <option value="$PROJECT_DIR$/AssignmentStatement.py" />
         <option value="$PROJECT_DIR$/Id.py" />
         <option value="$PROJECT_DIR$/ArithmeticOperator.py" />
@@ -194,6 +193,7 @@
         <option value="$PROJECT_DIR$/Memory/Memory.py" />
         <option value="$PROJECT_DIR$/Interpreter.py" />
         <option value="$PROJECT_DIR$/LexicalAnalyzer.py" />
+        <option value="$PROJECT_DIR$/Parser.py" />
       </list>
     </option>
   </component>
@@ -693,12 +693,12 @@
       <workItem from="1395690849070" duration="94000" />
       <workItem from="1395691330084" duration="1873000" />
       <workItem from="1395708182065" duration="18448000" />
-      <workItem from="1395728207095" duration="4693000" />
+      <workItem from="1395728207095" duration="6472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36260000" />
+    <option name="totallyTimeSpent" value="38039000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1936" height="1056" extended-state="0" />
@@ -723,7 +723,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -749,26 +749,21 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/Interpreter.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
+          <line>12</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/Parser.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="11" />
+          <line>177</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/LexicalAnalyzer.py</url>
-          <line>51</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/LexicalAnalyzer.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/Parser.py</url>
+          <line>132</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="20" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1080,43 +1075,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="764" selection-end="764" vertical-scroll-proportion="0.33333334" vertical-offset="231" max-vertical-offset="3400">
-          <folding>
-            <element signature="e#2#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Interpreter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="666" selection-end="666" vertical-scroll-proportion="0.75" vertical-offset="17" max-vertical-offset="561">
+        <state line="13" column="0" selection-start="305" selection-end="305" vertical-scroll-proportion="0.375" vertical-offset="17" max-vertical-offset="561">
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://Z:/Python34/Lib/enum.py">
+    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="249" column="0" selection-start="10266" selection-end="10266" vertical-scroll-proportion="0.0" vertical-offset="4018" max-vertical-offset="8993">
-          <folding />
+        <state line="127" column="0" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.5" vertical-offset="1887" max-vertical-offset="2431">
+          <folding>
+            <element signature="e#2#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Token.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="720" selection-end="720" vertical-scroll-proportion="0.4375" vertical-offset="102" max-vertical-offset="646">
+        <state line="23" column="0" selection-start="784" selection-end="784" vertical-scroll-proportion="0.53125" vertical-offset="102" max-vertical-offset="646">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.py">
+    <entry file="file://Z:/Python34/Lib/enum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="76" selection-start="664" selection-end="664" vertical-scroll-proportion="0.32405892" vertical-offset="142" max-vertical-offset="2380">
+        <state line="252" column="0" selection-start="10347" selection-end="10347" vertical-scroll-proportion="0.0" vertical-offset="4069" max-vertical-offset="8993">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="0" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.29598662" vertical-offset="2067" max-vertical-offset="3400">
           <folding>
-            <element signature="e#2#47#0" expanded="true" />
+            <element signature="e#2#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
