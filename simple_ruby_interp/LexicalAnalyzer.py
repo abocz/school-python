@@ -2,7 +2,6 @@
 from LexicalException import LexicalException
 from Token import Token
 from TokenType import TokenType
-import TokenType
 
 
 class LexicalAnalyzer(object):
@@ -30,8 +29,8 @@ class LexicalAnalyzer(object):
         while column_num < line.length():
             lexeme = self.get_lexeme(line, column_num)
             type = self.determine_token_type(lexeme, line_num, column_num)
-            tok = Token(line_num, column_num)
-            self.token_list.add(tok)
+            tok = Token(line_num, column_num+1, lexeme, type)
+            self.token_list.append(tok)
             column_num += len(lexeme)
             column_num = self.skip_white_space(line, column_num)
 
@@ -41,36 +40,36 @@ class LexicalAnalyzer(object):
         assert column_num >= 0
         if lexeme[0].isalpha():
             if len(lexeme) is 1:
-                tokType = TokenType.TokenType.ID_TOK
+                tokType = TokenType.ID_TOK
             elif lexeme == "if":
-                tokType = TokenType.TokenType.IF_TOK
+                tokType = TokenType.IF_TOK
             elif lexeme == "until":
-                tokType = TokenType.TokenType.UNTIL_TOK
+                tokType = TokenType.UNTIL_TOK
             elif lexeme == "then":
-                tokType = TokenType.TokenType.THEN_TOK
+                tokType = TokenType.THEN_TOK
             elif lexeme == "else":
-                tokType = TokenType.TokenType.ELSE_TOK
+                tokType = TokenType.ELSE_TOK
             elif lexeme == "end":
-                tokType = TokenType.TokenType.END_TOK
+                tokType = TokenType.END_TOK
             elif lexeme == "puts":
-                tokType = TokenType.TokenType.PUTS_TOK
+                tokType = TokenType.PUTS_TOK
             elif lexeme == "def":
-                tokType = TokenType.TokenType.DEF_TOK
+                tokType = TokenType.DEF_TOK
             elif lexeme == "while":
-                tokType = TokenType.TokenType.WHILE_TOK
+                tokType = TokenType.WHILE_TOK
             elif lexeme == "do":
-                tokType = TokenType.TokenType.DO_TOK
+                tokType = TokenType.DO_TOK
             else:
                 raise LexicalException("Invalid lexeme", line_num, column_num)
         elif lexeme[0].isdigit():
             if self.all_digits(lexeme):
-                tokType = TokenType.TokenType.LIT_INT
+                tokType = TokenType.LIT_INT
         elif lexeme == "=":
-            tokType = TokenType.TokenType.ASSIGN_OP
+            tokType = TokenType.ASSIGN_OP
         elif lexeme == "+":
-            tokType = TokenType.TokenType.ADD_TOK
+            tokType = TokenType.ADD_TOK
         elif lexeme == "-":
-            tokType = TokenType.TokenType.SUB_TOK
+            tokType = TokenType.SUB_TOK
         elif lexeme == "*":
             tokType = TokenType.MUL_TOK
         elif lexeme == "/":

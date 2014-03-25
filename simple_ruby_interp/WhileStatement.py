@@ -2,7 +2,7 @@
 from Statement import Statement
 
 
-class UntilStatement(Statement):
+class WhileStatement(Statement):
     """
     WhileStatement statement object has BooleanExpression expr and CodeBlack cblock
     """
