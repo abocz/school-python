@@ -72,21 +72,21 @@ class LexicalAnalyzer(object):
         elif lexeme == "-":
             tokType = TokenType.TokenType.SUB_TOK
         elif lexeme == "*":
-            tokType = TokenType.TokenType.MUL_TOK
+            tokType = TokenType.MUL_TOK
         elif lexeme == "/":
-            tokType = TokenType.TokenType.DIV_TOK
+            tokType = TokenType.DIV_TOK
         elif lexeme == "==":
-            tokType = TokenType.TokenType.EQ_TOK
+            tokType = TokenType.EQ_TOK
         elif lexeme == "/=":
-            tokType = TokenType.TokenType.NE_TOK
+            tokType = TokenType.NE_TOK
         elif lexeme == "<":
-            tokType = TokenType.TokenType.LT_TOK
+            tokType = TokenType.LT_TOK
         elif lexeme == "<=":
-            tokType = TokenType.TokenType.LE_TOK
+            tokType = TokenType.LE_TOK
         elif lexeme == ">":
-            tokType = TokenType.TokenType.GT_TOK
+            tokType = TokenType.GT_TOK
         elif lexeme == ">=":
-            tokType = TokenType.TokenType.GE_TOK
+            tokType = TokenType.GE_TOK
         else:
             raise LexicalException("Invalid lexeme", line_num, column_num)
         return tokType
