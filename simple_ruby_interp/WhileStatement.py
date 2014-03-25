@@ -15,5 +15,5 @@ class UntilStatement(Statement):
         self.cblock = cblock
 
     def execute(self):
-        while expr.evaluate():
+        while self.expr.evaluate():
             self.cblock.execute()

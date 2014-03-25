@@ -1,7 +1,8 @@
 #Finished
+from enum import Enum
 
 
-class ArithmeticOperator:
+class ArithmeticOperator(Enum):
     """
     Pseudo-Enum class ArithmeticOperator
     """
