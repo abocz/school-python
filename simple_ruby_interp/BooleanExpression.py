@@ -1,5 +1,6 @@
 #
 from Expression import Expression
+from RelationalOperator import RelationalOperator
 
 
 class BooleanExpression(Expression):
@@ -15,7 +16,16 @@ class BooleanExpression(Expression):
 
     def evaluate(self):
         result = True
-        if self.op is EQ_OP:
-
-
+        if self.op == RelationalOperator.EQ_OP:
+            result = int(self.expr1.evaluate()) == int(self.expr2.evaluate())
+        if self.op == RelationalOperator.NE_OP:
+            result = int(self.expr1.evaluate()) != int(self.expr2.evaluate())
+        if self.op == RelationalOperator.LT_OP:
+            result = int(self.expr1.evaluate()) < int(self.expr2.evaluate())
+        if self.op == RelationalOperator.LE_OP:
+            result = int(self.expr1.evaluate()) <= int(self.expr2.evaluate())
+        if self.op == RelationalOperator.GT_OP:
+            result = int(self.expr1.evaluate()) > int(self.expr2.evaluate())
+        if self.op == RelationalOperator.GE_OP:
+            result = int(self.expr1.evaluate()) >= int(self.expr2.evaluate())
         return result
