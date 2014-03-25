@@ -2,9 +2,7 @@
 
 
 class Memory():
-    mem = []
-    for x in range(52):
-        mem.append(0)
+    mem = [0] * 52
 
     def fetch(self, var):
         assert var

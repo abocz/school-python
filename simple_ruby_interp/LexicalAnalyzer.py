@@ -103,7 +103,7 @@ class LexicalAnalyzer(object):
         i = column_num
         while (i < len(line)) and (not line[i].isspace()):
             i +=1
-        return line[i:i]
+        return line[column_num:i]
 
     def skip_white_space(self, line, column_num):
         assert line is not None
