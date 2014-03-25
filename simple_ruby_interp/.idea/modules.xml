@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/bocz_py_proj.iml" filepath="$PROJECT_DIR$/bocz_py_proj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple_ruby_interp.iml" filepath="$PROJECT_DIR$/simple_ruby_interp.iml" />
     </modules>
   </component>
 </project>
