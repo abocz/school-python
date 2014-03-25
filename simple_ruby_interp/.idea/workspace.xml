@@ -129,13 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parser.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Parser.py">
+      <file leaf-file-name="Memory.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Memory/Memory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="35" selection-start="3419" selection-end="3419" vertical-scroll-proportion="-1.0340285" vertical-offset="2489" max-vertical-offset="3400">
-              <folding>
-                <element signature="e#2#51#0" expanded="true" />
-              </folding>
+            <state line="12" column="32" selection-start="217" selection-end="217" vertical-scroll-proportion="0.22077923" vertical-offset="0" max-vertical-offset="924">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -664,12 +662,12 @@
       <workItem from="1395595414908" duration="4643000" />
       <workItem from="1395690849070" duration="94000" />
       <workItem from="1395691330084" duration="1873000" />
-      <workItem from="1395708182065" duration="17208000" />
+      <workItem from="1395708182065" duration="18219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30327000" />
+    <option name="totallyTimeSpent" value="31338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1936" height="1056" extended-state="0" />
@@ -1047,6 +1045,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="35" selection-start="3419" selection-end="3419" vertical-scroll-proportion="-1.0340285" vertical-offset="2489" max-vertical-offset="3400">
+          <folding>
+            <element signature="e#2#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Id.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
@@ -1056,17 +1063,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Memory/Memory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8" selection-start="87" selection-end="87" vertical-scroll-proportion="0.14718615" vertical-offset="0" max-vertical-offset="924">
+        <state line="12" column="32" selection-start="217" selection-end="217" vertical-scroll-proportion="0.22077923" vertical-offset="0" max-vertical-offset="924">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="35" selection-start="3419" selection-end="3419" vertical-scroll-proportion="-1.0340285" vertical-offset="2489" max-vertical-offset="3400">
-          <folding>
-            <element signature="e#2#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
