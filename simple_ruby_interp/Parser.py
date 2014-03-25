@@ -1,12 +1,21 @@
 #
+from ArithmeticOperator import ArithmeticOperator
+from AssignmentStatement import AssignmentStatement
+from BinaryExpression import BinaryExpression
 from BooleanExpression import BooleanExpression
 from CodeBlock import CodeBlock
+from Expression import Expression
+from Id import Id
+from IfStatement import IfStatement
 from LexicalAnalyzer import LexicalAnalyzer
+from LiteralInterger import LiteralInteger
 from ParserException import ParserException
+from PrintStatement import PrintStatement
 from Program import Program
+from RelationalOperator import RelationalOperator
 from TokenType import TokenType
 from UntilStatement import UntilStatement
-import WhileStatement
+from WhileStatement import WhileStatement
 
 
 class Parser():
@@ -80,31 +89,107 @@ class Parser():
         return UntilStatement(expr, cb)
 
     def get_if_statement(self):
-        pass
+        tok = self.get_next_token()
+        self.match(tok, TokenType.IF_TOK)
+        expr = self.get_boolean_expression()
+        tok = self.get_next_token()
+        self.match(tok, TokenType.THEN_TOK)
+        cb1 = self.get_codeblock()
+        tok = self.get_next_token()
+        self.match(tok, TokenType.ELSE_TOK)
+        cb2 = self.get_codeblock()
+        tok = self.get_next_token()
+        self.match(tok, TokenType.END_TOK)
+        return IfStatement(expr, cb1, cb2)
 
     def get_print_statement(self):
-        pass
+        tok = self.get_next_token()
+        self.match(tok, TokenType.PUTS_TOK)
+        expr = self.get_expression()
+        return PrintStatement(expr)
 
     def get_assignment_statement(self):
-        pass
+        tok = self.get_next_token()
+        self.match(tok, TokenType.ID_TOK)
+        var = Id(tok.get_lexeme()[0])
+        tok = self.get_next_token()
+        self.match(tok, TokenType.ASSIGN_OP)
+        expr = self.get_expression()
+        return AssignmentStatement(var, expr)
 
     def get_expression(self):
-        pass
+        expr = Expression()
+        tok = self.get_lookahead_token()
+        if tok.get_token_type() == TokenType.ID_TOK:
+            tok = self.get_next_token()
+            expr = Id(tok.get_lexeme()[0])
+        elif tok.get_token_type() == TokenType.LIT_INT:
+            tok = self.get_next_token()
+            try:
+                expr = LiteralInteger(int(tok.get_lexeme()))
+            except ParserException("Integer constant expected", tok.get_row_number(), tok.get_column_number()) as e:
+                print(e)
+        else:
+            op = self.get_arithmetic_operator()
+            expr1 = self.get_expression()
+            expr2 = self.get_expression()
+            expr = BinaryExpression(op, expr1, expr2)
+        return expr
 
-    def get_arithmetic_operatir(self):
-        pass
+    def get_arithmetic_operator(self):
+        tok = self.get_next_token()
+        if tok.get_token_type() == TokenType.ADD_TOK:
+            op = ArithmeticOperator.ADD_OP
+        elif tok.get_token_type() == TokenType.SUB_TOK:
+            op = ArithmeticOperator.SUB_OP
+        elif tok.get_token_type() == TokenType.MUL_TOK:
+            op = ArithmeticOperator.MUL_OP
+        elif tok.get_token_type() == TokenType.DIV_TOK:
+            op = ArithmeticOperator.DIV_OP
+        else:
+            raise ParserException("Arithmetic Operator expected", tok.get_row_number, tok.get_column_number)
+        return op
 
     def get_boolean_expression(self):
-        pass
+        op = self.get_relational_operator()
+        expr1 = self.get_expression()
+        expr2 = self.get_expression()
+        return BooleanExpression(op, expr1, expr2)
 
     def get_relational_operator(self):
-        pass
+        tok = self.get_next_token()
+        if tok.get_token_type() == TokenType.NE_TOK:
+            op = RelationalOperator.NE_OP
+        elif tok.get_token_type() == TokenType.EQ_TOK:
+            op = RelationalOperator.EQ_OP
+        elif tok.get_token_type() == TokenType.LT_TOK:
+            op = RelationalOperator.LT_OP
+        elif tok.get_token_type() == TokenType.LE_TOK:
+            op = RelationalOperator.LE_OP
+        elif tok.get_token_type() == TokenType.GT_TOK:
+            op = RelationalOperator.GT_OP
+        elif tok.get_token_type() == TokenType.GE_TOK:
+            op = RelationalOperator.GE_OP
+        else:
+            raise ParserException("Relational operator expected at ", tok.get_row_number(), tok.get_column_number())
+        return op
 
     def match(self, tok, tokType):
-        pass
+        assert tok
+        assert tokType
+        if tok.get_token_type() != type:
+            raise ParserException(type + " expected at ", tok.get_line_number(), tok.get_column_number())
 
     def get_next_token(self):
-        pass
+        try:
+            tok = self.lex.get_next_token()
+        except ParserException("No next token") as e:
+            print(e)
+        return tok
 
     def get_lookahead_token(self):
-        pass
+        try:
+            tok = self.lex.get_lookahead_token()
+        except ParserException("No lookahead token") as e:
+            print(e)
+        return tok

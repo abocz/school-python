@@ -13,6 +13,8 @@ class Token(object):
             raise ValueError("Invalid column number from Token")
         if lexeme is None or 0:
             raise ValueError("Invalid lexeme from Token")
+        if tok_type is None:
+            raise ValueError("Invalid type from Token")
         self.row_number = row_number
         self.column_number = column_number
         self.lexeme = lexeme
