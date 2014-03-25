@@ -1,12 +1,15 @@
+from Memory.Memory import Memory
+
 
 class Id():
 
     def __init__(self, ch):
-        #test for is char
+        if not ch.isalpha:
+            raise ValueError("Invalid Id")
         self.ch = ch
 
     def get_char(self):
         return self.ch
 
     def evaluate(self):
-        #memory shit
+        Memory.fetch(self.ch)

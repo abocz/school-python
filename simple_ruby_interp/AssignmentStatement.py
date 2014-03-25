@@ -1,4 +1,5 @@
 #
+from Memory.Memory import Memory
 from Statement import Statement
 
 
@@ -15,5 +16,5 @@ class AssignmentStatement(Statement):
         self.expr = expr
 
     def execute(self):
-        #Memory.store(var, expr.evaluate)
+        Memory.store(self.var, self.expr.evaluate)
 
