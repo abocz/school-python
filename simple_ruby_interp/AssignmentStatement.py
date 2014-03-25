@@ -4,7 +4,7 @@ from Statement import Statement
 
 class AssignmentStatement(Statement):
     """
-    ASs
+    Assignment Statement
     """
     def __init__(self, var, expr):
         if not var:
@@ -15,5 +15,5 @@ class AssignmentStatement(Statement):
         self.expr = expr
 
     def execute(self):
-        #
+        #Memory.store(var, expr.evaluate)
 

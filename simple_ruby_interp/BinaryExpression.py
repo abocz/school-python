@@ -1,4 +1,5 @@
 #
+from ArithmeticOperator import ArithmeticOperator
 from Expression import Expression
 
 
@@ -14,4 +15,14 @@ class BinaryExpression(Expression):
         self.expr2 = expr2
 
     def evaluate(self):
-        #
+        if self.op == ArithmeticOperator.ADD_OP:
+            value = int(self.expr1.evaluate()) + int(self.expr2.evaluate())
+        elif self.op == ArithmeticOperator.SUB_OP:
+            value = int(self.expr1.evaluate()) - int(self.expr2.evaluate())
+        elif self.op == ArithmeticOperator.MUL_OP:
+            value = int(self.expr1.evaluate()) * int(self.expr2.evaluate())
+        elif self.op == ArithmeticOperator.DIV_OP:
+            value = int(self.expr1.evaluate()) / int(self.expr2.evaluate())
+        else:
+            raise ValueError("Invalid Arithmetic op")
+        return value
