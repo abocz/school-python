@@ -5,6 +5,9 @@ from TokenType import TokenType
 
 
 class LexicalAnalyzer(object):
+    """
+    Lexical Analyzer handles all the tokenizing
+    """
 
     def __init__(self, file_name):
         if not file_name:

@@ -1,14 +1,13 @@
-#
 from ArithmeticOperator import ArithmeticOperator
 from AssignmentStatement import AssignmentStatement
 from BinaryExpression import BinaryExpression
 from BooleanExpression import BooleanExpression
 from CodeBlock import CodeBlock
-from Expression import Expression
 from Id import Id
 from IfStatement import IfStatement
 from LexicalAnalyzer import LexicalAnalyzer
 from LiteralInterger import LiteralInteger
+from Memory.Memory import Memory
 from ParserException import ParserException
 from PrintStatement import PrintStatement
 from Program import Program
@@ -23,6 +22,7 @@ class Parser():
     def __init__(self, file_name):
         assert file_name
         self.lex = LexicalAnalyzer(file_name)
+        self.Memory = Memory()
 
     def parse(self):
         tok = self.get_next_token()
@@ -48,7 +48,7 @@ class Parser():
 
     def is_valid_start_of_statement(self, tok):
         assert tok
-        return (tok.getTokenType() == TokenType.ID_TOK) or (tok.getTokenType() == TokenType.IF_TOK) or (tok.getTokenType() == TokenType.WHILE_TOK) or (tok.getTokenType() == TokenType.UNTIL_TOK) or (tok.getTokenType() == TokenType.PUTS_TOK)
+        return (tok.get_token_type() == TokenType.ID_TOK) or (tok.get_token_type() == TokenType.IF_TOK) or (tok.get_token_type() == TokenType.WHILE_TOK) or (tok.get_token_type() == TokenType.UNTIL_TOK) or (tok.get_token_type() == TokenType.PUTS_TOK)
 
     def get_statement(self):
         tok = self.get_lookahead_token()
@@ -118,7 +118,6 @@ class Parser():
         return AssignmentStatement(var, expr)
 
     def get_expression(self):
-        expr = Expression()
         tok = self.get_lookahead_token()
         if tok.get_token_type() == TokenType.ID_TOK:
             tok = self.get_next_token()

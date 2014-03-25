@@ -14,7 +14,8 @@ class AssignmentStatement(Statement):
             raise ValueError("Invalid or Null expression argument in AssignmentStatement")
         self.var = var
         self.expr = expr
+        self.testMem = Memory()
 
     def execute(self):
-        Memory.store(self.var, self.expr.evaluate)
+        Memory.store(self.testMem, self.var, self.expr.evaluate())
 

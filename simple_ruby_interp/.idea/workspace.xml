@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/simple_ruby_interp$Interpreter.coverage" NAME="Interpreter Coverage Results" MODIFIED="1395734673738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/simple_ruby_interp$Interpreter.coverage" NAME="Interpreter Coverage Results" MODIFIED="1395741080751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -70,25 +70,7 @@
       <file leaf-file-name="BinaryExpression.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BinaryExpression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="23" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="561">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="codecs.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/Python34/Lib/codecs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="258" column="0" selection-start="8469" selection-end="8469" vertical-scroll-proportion="0.0" vertical-offset="4205" max-vertical-offset="18972">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cp1252.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/Python34/Lib/encodings/cp1252.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="5321">
+            <state line="27" column="0" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
               <folding />
             </state>
           </provider>
@@ -103,22 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_pydev_execfile.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydev_execfile.py">
+      <file leaf-file-name="ArithmeticOperator.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ArithmeticOperator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+            <state line="8" column="44" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="0" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.29598662" vertical-offset="2067" max-vertical-offset="3400">
-              <folding>
-                <element signature="e#2#51#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -132,11 +103,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_bootlocale.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/Python34/Lib/_bootlocale.py">
+      <file leaf-file-name="pydevd.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/pydevd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+            <state line="1531" column="0" selection-start="60412" selection-end="60412" vertical-scroll-proportion="0.0" vertical-offset="24100" max-vertical-offset="25024">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Memory/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LexicalAnalyzer.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="35" selection-start="541" selection-end="541" vertical-scroll-proportion="0.5286416" vertical-offset="0" max-vertical-offset="2482">
+              <folding>
+                <element signature="e#2#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,16 +135,25 @@
       <file leaf-file-name="BooleanExpression.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BooleanExpression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="8" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="612">
+            <state line="20" column="8" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CodeBlock.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CodeBlock.py">
+      <file leaf-file-name="Expression.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Expression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+            <state line="4" column="12" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Memory.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Memory/Memory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="36" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
               <folding />
             </state>
           </provider>
@@ -174,26 +174,27 @@
         <option value="$PROJECT_DIR$/Program.py" />
         <option value="$PROJECT_DIR$/Expression.py" />
         <option value="$PROJECT_DIR$/LiteralInterger.py" />
-        <option value="$PROJECT_DIR$/CodeBlock.py" />
         <option value="$PROJECT_DIR$/IfStatement.py" />
-        <option value="$PROJECT_DIR$/PrintStatement.py" />
         <option value="$PROJECT_DIR$/LexicalException.py" />
         <option value="$PROJECT_DIR$/ParserException.py" />
         <option value="$PROJECT_DIR$/Memory.py" />
-        <option value="$PROJECT_DIR$/BinaryExpression.py" />
         <option value="$PROJECT_DIR$/BooleanExpression.py" />
         <option value="$PROJECT_DIR$/UntilStatement.py" />
         <option value="$PROJECT_DIR$/WhileStatement.py" />
         <option value="$PROJECT_DIR$/Token.py" />
-        <option value="$PROJECT_DIR$/AssignmentStatement.py" />
-        <option value="$PROJECT_DIR$/Id.py" />
         <option value="$PROJECT_DIR$/ArithmeticOperator.py" />
         <option value="$PROJECT_DIR$/RelationalOperator.py" />
         <option value="$PROJECT_DIR$/TokenType.py" />
-        <option value="$PROJECT_DIR$/Memory/Memory.py" />
         <option value="$PROJECT_DIR$/Interpreter.py" />
+        <option value="$PROJECT_DIR$/BinaryExpression.py" />
+        <option value="$PROJECT_DIR$/PrintStatement.py" />
+        <option value="$PROJECT_DIR$/CodeBlock.py" />
         <option value="$PROJECT_DIR$/LexicalAnalyzer.py" />
+        <option value="$PROJECT_DIR$/Memory/__init__.py" />
         <option value="$PROJECT_DIR$/Parser.py" />
+        <option value="$PROJECT_DIR$/AssignmentStatement.py" />
+        <option value="$PROJECT_DIR$/Id.py" />
+        <option value="$PROJECT_DIR$/Memory/Memory.py" />
       </list>
     </option>
   </component>
@@ -693,12 +694,12 @@
       <workItem from="1395690849070" duration="94000" />
       <workItem from="1395691330084" duration="1873000" />
       <workItem from="1395708182065" duration="18448000" />
-      <workItem from="1395728207095" duration="6472000" />
+      <workItem from="1395728207095" duration="13247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38039000" />
+    <option name="totallyTimeSpent" value="44814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1936" height="1056" extended-state="0" />
@@ -709,6 +710,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -723,10 +725,9 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32947367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
@@ -753,17 +754,12 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/Parser.py</url>
-          <line>177</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/Parser.py</url>
-          <line>132</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/AssignmentStatement.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="38" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -771,20 +767,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Expression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IfStatement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LexicalException.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="35" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="357">
@@ -898,34 +880,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BinaryExpression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="23" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BooleanExpression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CodeBlock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Expression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IfStatement.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
@@ -936,27 +890,6 @@
     <entry file="file://$PROJECT_DIR$/ParserException.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="76" selection-start="535" selection-end="535" vertical-scroll-proportion="0.2943723" vertical-offset="0" max-vertical-offset="924">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PrintStatement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="35" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Program.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="29" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Statement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="24" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
           <folding />
         </state>
       </provider>
@@ -975,23 +908,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Id.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/gayler_proj/asdf/Memory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ArithmeticOperator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="44" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <folding />
         </state>
       </provider>
@@ -1017,13 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Memory/Memory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="86" selection-end="86" vertical-scroll-proportion="0.22258593" vertical-offset="0" max-vertical-offset="611">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://Z:/Python34/Lib/_bootlocale.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
@@ -1045,22 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AssignmentStatement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="237" selection-end="237" vertical-scroll-proportion="0.34375" vertical-offset="0" max-vertical-offset="544">
-          <folding>
-            <element signature="e#2#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LiteralInterger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.34375" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test1.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="3" selection-start="45" selection-end="45" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="187">
@@ -1075,27 +971,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Interpreter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="305" selection-end="305" vertical-scroll-proportion="0.375" vertical-offset="17" max-vertical-offset="561">
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="0" selection-start="4342" selection-end="4342" vertical-scroll-proportion="0.5" vertical-offset="1887" max-vertical-offset="2431">
-          <folding>
-            <element signature="e#2#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Token.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="784" selection-end="784" vertical-scroll-proportion="0.53125" vertical-offset="102" max-vertical-offset="646">
+        <state line="23" column="0" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Program.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
           <folding />
         </state>
       </provider>
@@ -1107,11 +992,122 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LiteralInterger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memory/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1531" column="0" selection-start="60412" selection-end="60412" vertical-scroll-proportion="0.0" vertical-offset="24100" max-vertical-offset="25024">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interpreter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="0.34375" vertical-offset="17" max-vertical-offset="561">
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Statement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="24" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinaryExpression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BooleanExpression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="8" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Expression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="12" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PrintStatement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="35" selection-start="265" selection-end="265" vertical-scroll-proportion="0.33387887" vertical-offset="0" max-vertical-offset="611">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ArithmeticOperator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="44" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeBlock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Id.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="20" selection-start="94" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memory/Memory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="36" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AssignmentStatement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="18" selection-start="464" selection-end="464" vertical-scroll-proportion="0.44517186" vertical-offset="0" max-vertical-offset="611">
+          <folding>
+            <element signature="e#2#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="0" selection-start="4935" selection-end="4935" vertical-scroll-proportion="0.29598662" vertical-offset="2067" max-vertical-offset="3400">
+        <state line="48" column="6" selection-start="1573" selection-end="1573" vertical-scroll-proportion="-3.292642" vertical-offset="2785" max-vertical-offset="3383">
           <folding>
-            <element signature="e#2#51#0" expanded="true" />
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="35" selection-start="541" selection-end="541" vertical-scroll-proportion="0.5286416" vertical-offset="0" max-vertical-offset="2482">
+          <folding>
+            <element signature="e#2#47#0" expanded="true" />
           </folding>
         </state>
       </provider>

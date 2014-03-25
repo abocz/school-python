@@ -1,4 +1,3 @@
-#maybe working
 
 
 class CodeBlock():
@@ -9,7 +8,7 @@ class CodeBlock():
     def add(self, stmt):
         if not stmt:
             raise ValueError("Null Statement argument in Codeblock")
-        self.stmts.add(stmt)
+        self.stmts.append(stmt)
 
     def execute(self):
         for s in self.stmts:
