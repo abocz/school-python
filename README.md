@@ -1,9 +1,20 @@
-<h1>school-python</h1>
+school-python
 =============
-<p>School and education related material</p>
-<p>Language: python</p>
-<ul>
-<li>Simple Fortran Interpreter</li>
-<li>Simple Web Form</li>
-<li>Web Script</li>
-</ul>
+
+Files and Projects for College Courses in Python
+
+Fortran Interpreter
+---------------
++ A minimal implementation of fortran in Python
+
+Simplified Ruby Interpreter
+---------------
++ A minimal implementation of Ruby in Python, based heavily on my Java version of this project
+
+Web Form CGI Script
+---------------
++ A python CGI script that calculates and displays a loan amortization table in an HTML page
+
+Database Access CGI Script
+---------------
++ A Python CGI script that encompasses basic database access functionality
