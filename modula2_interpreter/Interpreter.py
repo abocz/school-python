@@ -1,0 +1,26 @@
+from LexicalException import LexicalException
+from Parser import Parser
+from ParserException import ParserException
+from Program import Program
+
+
+class Interpreter(object):
+
+	def main():
+		try:
+			p = Parser("test1.mod")
+			progs = Program(p.parse())
+			progs.execute()
+		except LexicalException as e:
+			print(e)
+		except ParserException as e:
+			print(e)
+		except ValueError as e:
+			print(e)
+			print("ValueError in Interpreter")
+		except Exception as e:
+			print(e)
+			print("Unknown error occurred - terminating")
+
+	if __name__ == "__main__":
+		main()
